@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<com.google.ads.AdView android:id="@+id/adView"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_alignParentTop="true" ads:adUnitId="a14dfa5fe9e9ba2"
+		ads:adSize="BANNER" ads:loadAdOnCreate="false" />
+
+
+	<Button android:id="@+id/dogone" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:text="Dog Whistle 1"
+		android:layout_below="@+id/adView" />
+
+	<Button android:id="@+id/dogtwo" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:text="Dog Whistle 2"
+		android:layout_below="@+id/dogone" />
+
+	<Button android:id="@+id/dogthree" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:text="Dog Whistle 3"
+		android:layout_below="@+id/dogtwo" />
+		
+			<Button android:id="@+id/dogfour" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:text="Dog Whistle 4"
+		android:layout_below="@+id/dogthree" />
+
+
+	<TextView android:text="Bonus - Generate specific frequencies to test."
+		android:id="@+id/belowtext" android:layout_above="@+id/frequencytable"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"></TextView>
+
+	<TableRow android:layout_alignParentBottom="true"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:id="@+id/frequencytable">
+		<Button android:id="@+id/freqbutton" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="Play Frequency Hz" />
+		<EditText android:layout_width="fill_parent" android:id="@+id/freqbonus"
+			android:text="1200" android:numeric="decimal" android:layout_height="wrap_content"></EditText>
+	</TableRow>
+</RelativeLayout>
